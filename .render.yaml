@@ -1,0 +1,136 @@
+services:
+  - type: web
+    runtime: docker
+    name: euro-compliance
+    region: frankfurt
+    ipAllowList: []
+    envVars:
+      - key: APP_NAME
+        value: EuroCurrencyCompliance
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://yourapp.onrender.com
+
+      - key: APP_LOCALE
+        value: en
+      - key: APP_FALLBACK_LOCALE
+        value: en
+      - key: APP_FAKER_LOCALE
+        value: en_US
+
+      - key: PHP_CLI_SERVER_WORKERS
+        value: "4"
+      - key: BCRYPT_ROUNDS
+        value: "12"
+
+      - key: LOG_CHANNEL
+        value: stack
+      - key: LOG_STACK
+        value: single
+      - key: LOG_DEPRECATIONS_CHANNEL
+        value: null
+      - key: LOG_LEVEL
+        value: info
+
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        value: your-db-host
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_DATABASE
+        value: shopify_euro_adoption
+      - key: DB_USERNAME
+        value: your-db-username
+      - key: DB_PASSWORD
+        value: your-db-password
+
+      - key: SESSION_DRIVER
+        value: database
+      - key: SESSION_LIFETIME
+        value: "120"
+      - key: SESSION_ENCRYPT
+        value: "false"
+      - key: SESSION_PATH
+        value: /
+      - key: SESSION_DOMAIN
+        value: null
+
+      - key: BROADCAST_CONNECTION
+        value: log
+      - key: FILESYSTEM_DISK
+        value: local
+      - key: QUEUE_CONNECTION
+        value: database
+
+      - key: CACHE_STORE
+        value: database
+      - key: CACHE_PREFIX
+        value: null
+
+      - key: MEMCACHED_HOST
+        value: 127.0.0.1
+
+      - key: REDIS_CLIENT
+        value: phpredis
+      - key: REDIS_HOST
+        value: 127.0.0.1
+      - key: REDIS_PASSWORD
+        value: null
+      - key: REDIS_PORT
+        value: "6379"
+
+      - key: MAIL_MAILER
+        value: log
+      - key: MAIL_HOST
+        value: 127.0.0.1
+      - key: MAIL_PORT
+        value: "2525"
+      - key: MAIL_USERNAME
+        value: null
+      - key: MAIL_PASSWORD
+        value: null
+      - key: MAIL_ENCRYPTION
+        value: null
+      - key: MAIL_FROM_ADDRESS
+        value: hello@example.com
+      - key: MAIL_FROM_NAME
+        value: EuroCompliance
+
+      - key: AWS_ACCESS_KEY_ID
+        value: null
+      - key: AWS_SECRET_ACCESS_KEY
+        value: null
+      - key: AWS_DEFAULT_REGION
+        value: us-east-1
+      - key: AWS_BUCKET
+        value: null
+      - key: AWS_USE_PATH_STYLE_ENDPOINT
+        value: false
+
+      - key: VITE_APP_NAME
+        value: EuroCompliance
+
+      - key: SHOPIFY_APPBRIDGE_VERSION
+        value: latest
+      - key: SHOPIFY_APP_NAME
+        value: EuroCompliance
+      - key: SHOPIFY_API_VERSION
+        value: 2025-04
+      - key: SHOPIFY_API_KEY
+        value: your_shopify_api_key
+      - key: SHOPIFY_API_SECRET
+        value: your_shopify_secret
+      - key: VITE_SHOPIFY_API_KEY
+        value: your_shopify_api_key
+      - key: SHOPIFY_FRONTEND_ENGINE
+        value: REACT
+      - key: SHOPIFY_API_SSL_VERIFY
+        value: false
+      - key: SHOPIFY_BILLING_ENABLED
+        value: true
