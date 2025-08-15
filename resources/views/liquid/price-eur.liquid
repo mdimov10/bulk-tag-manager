@@ -1,0 +1,17 @@
+{% comment %}
+  Dual Price Snippet: Shows main currency and EUR prices.
+{% endcomment %}
+
+{% assign euro_fixed_rate = 1.95583 %}
+
+<div class="price">
+  {% if product.compare_at_price > product.price %}
+    <span class="price-bgn">{{ product.price | money }}</span>
+    <span class="price-eur"> ({{ product.price | divided_by: euro_fixed_rate | money_without_currency }}€)</span>
+    <br>
+    <span class="compare-at-bgn" style="text-decoration: line-through;">{{ product.compare_at_price | money }}</span>
+  {% else %}
+    <span class="price-bgn">{{ product.price | money }}</span>
+    <span class="price-eur"> ({{ product.price | divided_by: euro_fixed_rate | money_without_currency }}€)</span>
+  {% endif %}
+</div>

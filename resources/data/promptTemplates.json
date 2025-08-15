@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "SEO Optimized Description",
+        "prompt": "Generate a detailed, SEO-optimized product description focusing on {product_title} with keywords related to {product_category}."
+    },
+    {
+        "id": 2,
+        "name": "Engaging Sales Copy",
+        "prompt": "Write a compelling product description for {product_title} that highlights its unique selling points and convinces customers to buy."
+    },
+    {
+        "id": 3,
+        "name": "Minimalist Style",
+        "prompt": "Create a short, impactful product description for {product_title} in a minimalist tone, avoiding unnecessary fluff."
+    },
+    {
+        "id": 4,
+        "name": "Storytelling Format",
+        "prompt": "Write a product description for {product_title} that tells a short story about how it improves the customer's life."
+    }
+]
