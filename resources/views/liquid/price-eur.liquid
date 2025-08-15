@@ -1,0 +1,4 @@
+{% assign rate = 1.95583 %}
+{% assign price_number = price | money_without_currency | remove: ',' | plus: 0 %}
+{% assign euro_price = price_number | divided_by: rate | round: 2 %}
+ / {{ euro_price }}{% assign parts = euro_price | split: '.' %}{% if parts[1].size == 1 %}0{% endif %} €
