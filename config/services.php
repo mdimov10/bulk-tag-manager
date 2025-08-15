@@ -36,7 +36,7 @@ return [
     ],
 
     'openai' => [
-        'api_key' => env('OPENAI_API_KEY', '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'),
+        'api_key' => env('OPENAI_API_KEY', ''),
         'default_prompt_language' => 'English',
     ],
 ];
